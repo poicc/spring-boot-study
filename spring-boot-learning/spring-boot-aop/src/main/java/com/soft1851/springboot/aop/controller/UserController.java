@@ -1,6 +1,7 @@
 package com.soft1851.springboot.aop.controller;
 
 import com.soft1851.springboot.aop.annotation.AuthToken;
+import com.soft1851.springboot.aop.annotation.ControllerWebLog;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,6 +19,7 @@ public class UserController {
      * @return
      */
     @GetMapping("hello")
+    @ControllerWebLog(name = "getHello", isSaved = true)
     public String hello(String name){
         log.info("hello()方法无需鉴权，也无需认证,当前用户名："+name);
         return  "hello方法访问成功";
@@ -30,6 +32,7 @@ public class UserController {
      */
     @GetMapping("user")
     @AuthToken
+    @ControllerWebLog(name = "getHello", isSaved = true)
     public String user(String name){
         log.info("hello()方法无需鉴权，需要认证,当前用户名："+name);
         return "user()方法访问成功";
@@ -44,8 +47,10 @@ public class UserController {
      */
     @GetMapping("admin")
     @AuthToken(role_name = {"admin","Admin"})
+    @ControllerWebLog(name = "getHello", isSaved = true)
     public String admin(String name){
         log.info("hello()方法需要鉴权,当前用户名："+name);
         return "admin()方法响应成功";
     }
+
 }
