@@ -20,8 +20,6 @@ public class UserController {
     @Resource
     private UserMapper userMapper;
 
-
-
     /**
      * 无需任何校验，不用加注解
      * @param name
@@ -44,7 +42,7 @@ public class UserController {
     @ControllerWebLog(name = "getUser", isSaved = true)
     public String user(String id) throws SQLException {
         String name = userMapper.selectAdminById(id).getUsername();
-        log.info("hello()方法无需鉴权，需要认证,当前用户名："+name);
+        log.info("user()方法无需鉴权，需要认证,当前用户名："+name);
         return "user()方法访问成功";
     }
 
@@ -60,7 +58,7 @@ public class UserController {
     @ControllerWebLog(name = "getAdmin", isSaved = true)
     public String admin(String id) throws SQLException {
         String name = userMapper.selectAdminById(id).getUsername();
-        log.info("hello()方法需要鉴权,当前用户名："+name);
+        log.info("admin()方法需要鉴权,当前用户名："+name);
         return "admin()方法响应成功";
     }
 

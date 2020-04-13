@@ -30,6 +30,6 @@ public interface UserMapper {
      * @return
      * @throws SQLException
      */
-    @Select("SELECT is_admin FROM t_role WHERE id=#{id}")
+    @Select("SELECT * FROM t_role WHERE id=#{id}")
     Role selectAdminById(String id) throws SQLException;
 }
