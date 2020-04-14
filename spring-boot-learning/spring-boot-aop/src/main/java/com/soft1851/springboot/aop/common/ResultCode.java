@@ -4,12 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author mq_xu
- * @ClassName StingUtil
- * @Description 使用一个枚举全局管理API状态码，这对线上环境定位错误问题和后续接口文档的维护都是很有帮助
- * @Date 2019/12/1
+ * @Description TODO
+ * @Author wf
+ * @Date 2020/4/13
  * @Version 1.0
- **/
+ */
 public enum ResultCode {
     /* 成功状态码 */
     SUCCESS(1, "成功"),
@@ -29,7 +28,6 @@ public enum ResultCode {
     USER_ACCOUNT_FORBIDDEN(20006, "账号已被禁用"),
     USER_SIGN_UP_FAIL(20007, "用户注册失败"),
     USER_SIGN_IN_FAIL(20008, "用户登录失败"),
-    USER_NOT_AUTH(20009, "权限不足，无法访问"),
 
 
     /* 业务错误：30001-39999 */
@@ -103,13 +101,13 @@ public enum ResultCode {
      * @param args
      */
     public static void main(String[] args) {
-        ResultCode[] apiResultCodes = ResultCode.values();
+        ResultCode[] ApiResultCodes = ResultCode.values();
         List<Integer> codeList = new ArrayList<Integer>();
-        for (ResultCode apiResultCode : apiResultCodes) {
-            if (codeList.contains(apiResultCode.code)) {
-                System.out.println(apiResultCode.code);
+        for (ResultCode ApiResultCode : ApiResultCodes) {
+            if (codeList.contains(ApiResultCode.code)) {
+                System.out.println(ApiResultCode.code);
             } else {
-                codeList.add(apiResultCode.code());
+                codeList.add(ApiResultCode.code());
             }
         }
     }
