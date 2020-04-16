@@ -1,8 +1,8 @@
-package com.soft1851.springboot.jwt.controller;
+package com.soft1851.springboot.mbp.controller;
 
-import com.soft1851.springboot.jwt.common.ResponseResult;
-import com.soft1851.springboot.jwt.service.AdminService;
-import com.soft1851.springboot.jwt.util.JwtTokenUtil;
+import com.soft1851.springboot.mbp.common.ResponseResult;
+import com.soft1851.springboot.mbp.service.AdminService;
+import com.soft1851.springboot.mbp.util.JwtTokenUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -31,7 +31,7 @@ public class AdminController {
     private AdminService adminService;
 
     @PostMapping("/login")
-    public ResponseResult adminLogin(String username, String password,String role) {
+    public ResponseResult adminLogin(String username, String password, String role) {
         //模拟登录成功
         log.info(username, password,role);
         //模拟从数据库取得的用户ID和角色信息

@@ -1,7 +1,8 @@
-package com.soft1851.springboot.jwt.exception;
+package com.soft1851.springboot.mbp.exception;
 
-import com.soft1851.springboot.jwt.common.ResponseResult;
-import com.soft1851.springboot.jwt.common.ResultCode;
+
+import com.soft1851.springboot.mbp.common.ResponseResult;
+import com.soft1851.springboot.mbp.common.ResultCode;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ExceptionHandler;

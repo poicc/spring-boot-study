@@ -1,9 +1,10 @@
-package com.soft1851.springboot.jwt.interceptor;
+package com.soft1851.springboot.mbp.interceptor;
 
-import com.soft1851.springboot.jwt.common.ResultCode;
-import com.soft1851.springboot.jwt.exception.JwtException;
-import com.soft1851.springboot.jwt.service.AdminService;
-import com.soft1851.springboot.jwt.util.JwtTokenUtil;
+
+import com.soft1851.springboot.mbp.common.ResultCode;
+import com.soft1851.springboot.mbp.exception.JwtException;
+import com.soft1851.springboot.mbp.service.AdminService;
+import com.soft1851.springboot.mbp.util.JwtTokenUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;

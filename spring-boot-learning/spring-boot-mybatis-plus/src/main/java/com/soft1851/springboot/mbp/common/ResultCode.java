@@ -1,4 +1,4 @@
-package com.soft1851.springboot.jwt.common;
+package com.soft1851.springboot.mbp.common;
 
 /**
  * @author mq_xu

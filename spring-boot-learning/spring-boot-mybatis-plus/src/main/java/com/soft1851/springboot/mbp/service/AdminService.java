@@ -1,4 +1,4 @@
-package com.soft1851.springboot.jwt.service;
+package com.soft1851.springboot.mbp.service;
 
 import org.springframework.stereotype.Service;
 
