@@ -7,4 +7,5 @@ import com.soft1851.springboot.mbp.entity.User;
  * @author CRQ
  */
 public interface UserMapper extends BaseMapper<User> {
+
 }

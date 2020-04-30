@@ -1,7 +1,7 @@
 package com.soft1851.springboot.mbp.service;
 
-import com.soft1851.springboot.mbp.model.SysUser;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.soft1851.springboot.mbp.model.SysUser;
 
 /**
  * <p>
